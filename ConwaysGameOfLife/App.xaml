@@ -1,0 +1,10 @@
+﻿<Application x:Class="ConwaysGameOfLife.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:nClasses="clr-namespace:ConwaysGameOfLife.nClasses"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <nClasses:BoolToBrushConverter x:Key="boolConv"/>
+        <BooleanToVisibilityConverter x:Key="visConv"/>
+    </Application.Resources>
+</Application>

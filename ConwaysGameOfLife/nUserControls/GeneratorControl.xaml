@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="ConwaysGameOfLife.nUserControls.GeneratorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <GroupBox Header="Generators" BorderBrush="Black">
+        <StackPanel>
+            <Button Click="Button_Click">Glider</Button>
+            <Button Click="Button_Click_1">r-pentomino</Button>
+            <Label>Noise Generator</Label>
+            <StackPanel>
+                <Button Click="Button_Click_2">Start</Button>
+                <Button Click="Button_Click_3">Stop</Button>
+            </StackPanel>
+            
+        </StackPanel>
+    </GroupBox>
+</UserControl>

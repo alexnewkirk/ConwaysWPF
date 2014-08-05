@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="ConwaysGameOfLife.nUserControls.ColorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Slider}">
+            <Setter Property="Margin" Value="2,2,2,2"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="2,2,2,2"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <GroupBox Header="Colors" BorderBrush="Black">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <Label>Red</Label>
+                    <Label>Green</Label>
+                    <Label>Blue</Label>
+                    <Label>Alpha</Label>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Slider Maximum="255" Value="{Binding Path=Red}"></Slider>
+                    <Slider Maximum="255" Value="{Binding Path=Green}"></Slider>
+                    <Slider Maximum="255" Value="{Binding Path=Blue}"></Slider>
+                    <Slider Maximum="255" Value="{Binding Path=Alpha}"></Slider>
+                </StackPanel>
+                <Image Margin="5,5,5,5" Grid.Column="2" Source="..\Images\grid.png"></Image>
+                <Rectangle Margin="5,5,5,5" Grid.Column="2" Fill="{Binding Path=PreviewColorBrush}"></Rectangle>
+            </Grid>
+            <CheckBox x:Name="RaveModeCheckBox" Checked="RaveModeCheckBox_Checked" Unchecked="RaveModeCheckBox_Unchecked">Party Mode</CheckBox>
+            <Button Click="Button_Click">Set Live Color</Button>
+            <Button Click="Button_Click_1">Set Dead Color</Button>
+            <Button Click="Button_Click_2">Set BG Color</Button>
+        </StackPanel>
+    </GroupBox>
+</UserControl>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="ConwaysGameOfLife.nUserControls.PlayControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Width="300">
+    
+    <GroupBox Header="Play" BorderBrush="Black">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Label Grid.Row="0">Speed</Label>
+                <Slider x:Name="SpeedSlider" Grid.Column="1" Grid.Row="0" Minimum="1" Maximum="15" IsSnapToTickEnabled="True" TickPlacement="BottomRight" TickFrequency="1" Value="15"></Slider>
+                <Label Grid.Column="2" Content="{Binding ElementName=SpeedSlider, Path=Value}"></Label>
+            </Grid>
+            <Button Click="Button_Click_1">Play</Button>
+            <Button Click="Button_Click_2">Stop</Button>
+            <Button Click="Button_Click">Tick</Button>
+        </StackPanel>
+    </GroupBox>
+</UserControl>
