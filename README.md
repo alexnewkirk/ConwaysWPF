@@ -1,1 +1,1 @@
-Conway's Game of Life. Naive algorithm implementation
+Conway's Game of Life. Naive algorithm implementation, messy design; this is very old code.
